@@ -1,0 +1,92 @@
+body {
+    background-color: #111111;
+    margin: 0;
+    overflow-x: hidden;
+  }
+  
+  .bg {
+    position: fixed;
+    top: -50%;
+    left: -50%;
+    right: -50%;
+    bottom: -50%;
+    width: 200%;
+    height: 200vh;
+    background: transparent url('http://assets.iceable.com/img/noise-transparent.png') repeat 0 0;
+    background-repeat: repeat;
+    animation: bg-animation .2s infinite;
+    opacity: .9;
+    visibility: visible;
+  }
+  
+  @keyframes bg-animation {
+      0% { transform: translate(0,0) }
+      10% { transform: translate(-5%,-5%) }
+      20% { transform: translate(-10%,5%) }
+      30% { transform: translate(5%,-10%) }
+      40% { transform: translate(-5%,15%) }
+      50% { transform: translate(-10%,5%) }
+      60% { transform: translate(15%,0) }
+      70% { transform: translate(0,10%) }
+      80% { transform: translate(-15%,0) }
+      90% { transform: translate(10%,5%) }
+      100% { transform: translate(5%,0) }
+  }
+  
+  @import url('https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap');
+  *{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Courier Prime", monospace;
+  }
+  
+  .header{
+    display: inline-flex;
+  }
+  .header .fixed {
+    font-size: 70px;
+    font-weight: 600;
+    background-image: conic-gradient(#553c9a 30%, #ee4b2b 40%, #ee4b2b 70%, #00c2cb 80%, #553c9a);
+  
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+  
+  }
+  .header .typed{
+    margin-left: 20px;
+    line-height: 90px;
+    height: 90px;
+    overflow: hidden;
+   
+  }
+  .header .typed li{
+    color: #553c9a;
+    font-size: 70px;
+    font-weight: 600;
+    list-style: none;
+    animation: slide 4.5s steps(3) infinite;
+    position: relative;
+    top: 0;
+  }
+  @keyframes slide{
+    100%{
+      top: -360px;
+    }
+  }
+  .header .typed li span{
+    position: relative;
+  }
+  .header .typed li span::before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    animation: cursor 1s infinite step-end, typing 1.5s steps(8) infinite;
+  }
+  
+  @keyframes slide{
+    100%{top:-270px}
+    }
